@@ -10,6 +10,7 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .box{
@@ -81,6 +82,12 @@ body{
 
 
 /* BOX BIGLIETTO -----------*/
+
+.biglietto{
+  position: absolute;
+  display: none;
+  transition: opacity 0.5 linear;
+}
 
 #tariffa-revenue{
   color: #d00000;

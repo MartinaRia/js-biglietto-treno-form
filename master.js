@@ -2,11 +2,18 @@
 var tariffa
 var promo
 
+//CATTURARE VALORI INSERITI NEGLI INPUT --------
 
-//numero km
-var numKm = parseInt(prompt("Prego inserire il numero di chilometri che si intende percorrere"))
+//nome utente
+var userName = document.getElementById('nome');
 //età
-var eta = parseInt(prompt("Prego inserire la propria età al momento del viaggio"))
+var userAge = document.getElementById('eta');
+//numero km
+var numKm = document.getElementById('km');
+
+
+
+//CALCOLO PREZZO BIGLIETTO ----------------------
 
 //prezzo biglietto: #km * 0,21€
 var prezzo = numKm * 0.21;
@@ -25,11 +32,7 @@ if (eta < 18) {
 } else {
   tariffa = prezzo
 }
-//display risultato
-document.getElementById("tariffa-revenue").innerHTML = "€ " +  tariffa.toFixed(2);
-
-
-//Logica display bollino promo
+//logica display bollino promo
 if (eta < 18) {
   promo = "Waw! Promo Young Applicata!" + "<br>" + "Sconto del 20% ai minori di 18 anni"
 } else if (eta > 65) {
@@ -37,5 +40,24 @@ if (eta < 18) {
 } else {
   promo = "Questa è la migliore tariffa del giorno!"
 }
+
+//display prezzo biglietto
+document.getElementById("tariffa-revenue").innerHTML = "€ " +  tariffa.toFixed(2);
+
 //display promo
 document.getElementById("dichiara-promo").innerHTML = promo
+
+
+
+//EVENTI SCATENATI DAI PULSANTI ---------------------------
+
+//variabili
+var calculate = document.getElementById('calcola');
+var box-biglietto = document.getElementsById('biglietto');
+
+calculate.addEventListener('click',
+  function() {
+    box-biglietto.style.display = "flex";
+  }
+
+)
