@@ -1,0 +1,164 @@
+body{
+  background: #e6e6e6;
+  font-family: helvetica;
+}
+
+
+.flex-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box{
+  background-color: white;
+  border-radius: 25px;
+  box-shadow:2px 3px 5px 1px #00000024;
+  width: 50%;
+  height: 50%;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/*BOX FORM ------------------*/
+
+.form{
+  display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+
+}
+.form input{
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 2px;
+  border: 1px solid #bababa;
+  height: 10%;
+}
+.form h3{
+  width: 100%;
+}
+#nome{
+  width: 100%;
+  margin: 5px 10px;
+}
+#eta{
+  margin-left: 10px;
+}
+#km{
+  margin-right: 10px;
+}
+
+#calcola{
+  width: 96%;
+  padding: 20px 0px;
+  background: red;
+  color: white;
+  font-weight: bold;
+  font-family: inherit;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  box-shadow: 3px 3px 5px 0px #00000045;
+}
+
+#calcola:hover{
+  background: #d00000;
+  transform: scale(1.05);
+}
+#calcola:active{
+  box-shadow: inset 3px 3px 2px 0px
+}
+
+
+
+/* BOX BIGLIETTO -----------*/
+
+#tariffa-revenue{
+  color: #d00000;
+  font-size: min(max(70px, 10vw), 100px );
+  font-weight: 700;
+  margin: 0px;
+}
+h3{
+  margin: 0px;
+}
+
+.bollino{
+  display: flex;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background: red;
+  padding: 15px;
+  color: white;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+}
+
+.riga-bottoni{
+  width: 100%;
+  display: flex;
+
+}
+.btn-biglietto{
+  flex-grow: 1;
+  padding: 20px 0px;
+  margin: 0px 10px;
+  background: red;
+  color: white;
+  font-weight: bold;
+  font-family: inherit;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  box-shadow: 3px 3px 5px 0px #00000045;
+}
+
+.btn-biglietto:hover{
+  background: #d00000;
+  transform: scale(1.05);
+}
+.btn-biglietto:active{
+  box-shadow: inset 3px 3px 2px 0px #00000045
+}
+
+/* TABLET --------------------------------- */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .bollino{
+    width: 120px;
+    height: 120px;
+  }
+  #dichiara-promo{
+    font-size: 15px;
+  }
+
+
+}
+
+/* MOBILE --------------------------------- */
+@media screen and (max-width: 767px) {
+  .bollino{
+    width: 80px;
+    height: 80px;
+  }
+  #dichiara-promo{
+    font-size: 10px;
+  }
+
+
+}

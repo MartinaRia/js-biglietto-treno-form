@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/jpg" href="../Logo-M.png"/>
+
+    <title>BooleanTrains</title>
+  </head>
+  <body>
+
+    <div class="flex-container">
+      <div class="box form">
+        <h3>Inserire i dati per calcolare il prezzo del biglietto</h3>
+        <input id="nome" type="text" placeholder="Nome" name="" value="">
+        <input id="eta" class="seconda-riga" type="number" placeholder="Età" name="" value="">
+        <input id="km"class="seconda-riga"type="text" placeholder="Km da percorrere" name="" value="">
+        <button id="calcola" type="button" name="button">GENERA</button>
+      </div>
+    </div>
+
+
+    <div class="flex-container">
+      <div class="box biglietto">
+        <h3><span id="nome-utente"></span>, il prezzo del tuo biglietto è:</h3>
+        <h1 id="tariffa-revenue" >€ ?</h1>
+        <div class="bollino">
+          <p id="dichiara-promo"></p>
+        </div>
+        <div class="riga-bottoni">
+          <button id="btn-prenota" class="btn-biglietto" type="button" name="button">PRENOTA ORA</button>
+          <button id="btn-reset" class="btn-biglietto" type="button" name="button">ANNULLA</button>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- <p id="tariffa-revenue"></p>
+
+    <p id="dichiara-promo"></p> -->
+
+    <script type="text/javascript" src="master.js"> </script>
+  </body>
+</html>
